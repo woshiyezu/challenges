@@ -6,11 +6,16 @@
         <variable
             name="charity"
             type="jp.millennium.ncl.tmobile.model.Charity" />
+
+        <variable
+            name="listener"
+            type="jp.millennium.ncl.tmobile.view.CharityClickListener"/>
     </data>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="125dp"
+        android:onClick="@{listener::onCharityClicked}"
         android:orientation="horizontal">
 
         <ImageView

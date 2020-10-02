@@ -1,10 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/tmobile_navigation.xml"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tmobile_navigation.xml"
     app:startDestination="@id/charityListFragment">
 
     <fragment
         android:id="@+id/charityListFragment"
         android:name="jp.millennium.ncl.tmobile.view.CharityListFragment"
-        android:label="Charity List" />
+        android:label="Charity List" >
+        <action
+            android:id="@+id/actionCharityDonationFragment"
+            app:destination="@id/charityDonationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/charityDonationFragment"
+        android:name="jp.millennium.ncl.tmobile.view.CharityDonationFragment"
+        android:label="Charity Donation"
+        tools:layout="@layout/charity_donation_fragment" />
 </navigation>
