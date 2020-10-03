@@ -1,5 +1,12 @@
 <resources>
     <string name="app_name">tmobile</string>
 
+    <string name="payment_amount">Payment Amount</string>
+    <string name="card_number">Card Number</string>
+    <string name="card_name">Name on card</string>
+    <string name="expiry_date">Expiry date</string>
+    <string name="security_code">Security code</string>
+    <string name="submit">Submit</string>
+
     <string name="an_error_occured_while_loading_data">An error occured while loading data</string>
 </resources>

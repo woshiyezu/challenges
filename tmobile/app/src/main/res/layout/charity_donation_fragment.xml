@@ -1,14 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".view.CharityDonationFragment">
 
-    <Button
-        android:id="@+id/button"
+    <TextView
+        android:id="@+id/paymentAmountTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button" />
+        android:text="@string/payment_amount" />
 
-</FrameLayout>
+    <EditText
+        android:id="@+id/paymentAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:layout_below="@+id/paymentAmountTitle" />
+
+    <TextView
+        android:id="@+id/cardNumberTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/card_number"
+        android:layout_below="@+id/paymentAmount" />
+
+    <co.omise.android.ui.CreditCardEditText
+        android:id="@+id/cardNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cardNumberTitle"/>
+
+    <TextView
+        android:id="@+id/cardNameTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/card_name"
+        android:layout_below="@+id/cardNumber" />
+
+    <co.omise.android.ui.CardNameEditText
+        android:id="@+id/cardName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cardNameTitle" />
+
+    <TextView
+        android:id="@+id/expiryDateTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/expiry_date"
+        android:layout_below="@+id/cardName" />
+
+    <co.omise.android.ui.ExpiryDateEditText
+        android:id="@+id/expiryDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/expiryDateTitle" />
+
+    <TextView
+        android:id="@+id/securityCodeTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/security_code"
+        android:layout_toEndOf="@+id/expiryDateTitle"
+        android:layout_below="@+id/cardName" />
+
+    <co.omise.android.ui.SecurityCodeEditText
+        android:id="@+id/securityCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/expiryDate"
+        android:layout_below="@+id/securityCodeTitle" />
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/submit"
+        android:layout_below="@+id/expiryDate" />
+
+</RelativeLayout>

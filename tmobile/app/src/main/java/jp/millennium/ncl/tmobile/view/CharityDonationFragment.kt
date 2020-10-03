@@ -31,7 +31,7 @@ class CharityDonationFragment : Fragment() {
         viewModel = ViewModelProviders.of(this).get(CharityDonationViewModel::class.java)
         // TODO: Use the ViewModel
 
-        button.setOnClickListener {
+        submit.setOnClickListener {
             val action = CharityDonationFragmentDirections.actionSuccessFragment()
             Navigation.findNavController(it).navigate(action)
         }
