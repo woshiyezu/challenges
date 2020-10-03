@@ -17,5 +17,18 @@
         android:id="@+id/charityDonationFragment"
         android:name="jp.millennium.ncl.tmobile.view.CharityDonationFragment"
         android:label="Charity Donation"
-        tools:layout="@layout/charity_donation_fragment" />
+        tools:layout="@layout/charity_donation_fragment" >
+        <action
+            android:id="@+id/actionSuccessFragment"
+            app:destination="@id/successFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/successFragment"
+        android:name="jp.millennium.ncl.tmobile.view.SuccessFragment"
+        android:label="Success"
+        tools:layout="@layout/success_fragment" >
+        <action
+            android:id="@+id/actionCharityListFragment"
+            app:destination="@id/charityListFragment" />
+    </fragment>
 </navigation>
