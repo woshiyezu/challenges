@@ -19,4 +19,8 @@ class OmiseApiService {
         return api.getCharities()
     }
 
+    fun createDonations(donation: Donation): Single<ResOmise> {
+        return api.createDonations(donation)
+    }
+
 }

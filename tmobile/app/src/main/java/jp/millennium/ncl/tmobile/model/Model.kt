@@ -13,3 +13,22 @@ data class Charity(
     @SerializedName("logo_url")
     val logoUrl: String
 )
+
+data class Donation(
+
+    val name: String,
+    val token: String,
+    val amount: Int
+)
+
+data class ResOmise(
+
+    @SerializedName("success")
+    val success: Boolean,
+
+    @SerializedName("error_code")
+    val errorCode: String,
+
+    @SerializedName("error_message")
+    val errorMessage: String
+)

@@ -6,25 +6,25 @@
     tools:context=".view.CharityDonationFragment">
 
     <TextView
-        android:id="@+id/paymentAmountTitle"
+        android:id="@+id/amountTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/payment_amount" />
 
     <EditText
-        android:id="@+id/paymentAmount"
+        android:id="@+id/amount"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="number"
-        android:layout_below="@+id/paymentAmountTitle" />
+        android:layout_below="@+id/amountTitle" />
 
     <TextView
         android:id="@+id/cardNumberTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/card_number"
-        android:layout_below="@+id/paymentAmount" />
+        android:layout_below="@+id/amount" />
 
     <co.omise.android.ui.CreditCardEditText
         android:id="@+id/cardNumber"
@@ -79,5 +79,12 @@
         android:layout_height="wrap_content"
         android:text="@string/submit"
         android:layout_below="@+id/expiryDate" />
+
+    <ProgressBar
+        android:id="@+id/loadingView"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/submit" />
 
 </RelativeLayout>

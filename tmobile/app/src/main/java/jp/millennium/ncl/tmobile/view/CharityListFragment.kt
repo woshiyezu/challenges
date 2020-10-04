@@ -36,32 +36,32 @@ class CharityListFragment : Fragment() {
         observeViewModel()
     }
 
-    fun observeViewModel(){
-        viewModel.charities.observe(this, Observer { charities->
+    private fun observeViewModel(){
+        viewModel.charities.observe(this, Observer { charities ->
             charities?.let{
                 charityList.visibility = View.VISIBLE
                 charityListAdapter.updateCharityList(it)
             }
         })
 
-        viewModel.charitiesLoadError.observe(this, Observer { isError->
+        viewModel.charitiesLoadError.observe(this, Observer { isError ->
             isError?.let {
-                when(it){
+                when(it) {
                     true -> listError.visibility = View.VISIBLE
                     false -> listError.visibility = View.GONE
                 }
             }
         })
 
-        viewModel.loading.observe(this, Observer { isLoading->
+        viewModel.loading.observe(this, Observer { isLoading ->
             isLoading.let {
-                when(it){
-                    true->  {
+                when(it) {
+                    true ->  {
                         loadingView.visibility = View.VISIBLE
                         listError.visibility = View.GONE
                         charityList.visibility = View.GONE
                     }
-                    false -> {loadingView.visibility = View.GONE }
+                    false -> { loadingView.visibility = View.GONE }
                 }
             }
         })
