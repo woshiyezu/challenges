@@ -11,6 +11,8 @@
     <string name="security_code">Security code</string>
     <string name="security_code_hint">CCV</string>
     <string name="submit">Submit</string>
+    <string name="payment_desc">Your payment is complete.</string>
+    <string name="go_home">Go Home</string>
 
-    <string name="an_error_occured_while_loading_data">An error occured while loading data</string>
+    <string name="an_error_occured_while_loading_data">An error occurred while loading data</string>
 </resources>

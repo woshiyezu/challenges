@@ -48,7 +48,7 @@ class CharityDonationFragment : Fragment() {
             result?.let{
                 when(it) {
                     is OmiseResult.Ok -> {
-                        val action = CharityDonationFragmentDirections.actionSuccessFragment()
+                        val action = CharityDonationFragmentDirections.actionSuccessFragment(amount.text.toString())
                         Navigation.findNavController(view!!).navigate(action)
                     }
                     is OmiseResult.Ng -> {

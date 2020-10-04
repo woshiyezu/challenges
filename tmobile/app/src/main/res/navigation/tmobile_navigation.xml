@@ -30,5 +30,8 @@
         <action
             android:id="@+id/actionCharityListFragment"
             app:destination="@id/charityListFragment" />
+        <argument
+            android:name="amount"
+            app:argType="string" />
     </fragment>
 </navigation>
