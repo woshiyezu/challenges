@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.Observer
+import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import jp.millennium.ncl.tmobile.R
 import jp.millennium.ncl.tmobile.viewmodel.CharityListViewModel
@@ -32,6 +33,7 @@ class CharityListFragment : Fragment() {
         charityList.apply {
             layoutManager = LinearLayoutManager(context)
             adapter = charityListAdapter
+            addItemDecoration(DividerItemDecoration(context, LinearLayoutManager(context).orientation))
         }
         observeViewModel()
     }

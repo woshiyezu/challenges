@@ -9,7 +9,9 @@
         android:id="@+id/amountTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/payment_amount" />
+        android:text="@string/payment_amount"
+        android:layout_marginTop="20dp"
+        style="@style/DonationItem" />
 
     <EditText
         android:id="@+id/amount"
@@ -17,50 +19,57 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="number"
-        android:layout_below="@+id/amountTitle" />
+        android:layout_below="@+id/amountTitle"
+        style="@style/DonationItem" />
 
     <TextView
         android:id="@+id/cardNumberTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/card_number"
-        android:layout_below="@+id/amount" />
+        android:layout_below="@+id/amount"
+        style="@style/DonationItem" />
 
     <co.omise.android.ui.CreditCardEditText
         android:id="@+id/cardNumber"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/cardNumberTitle"/>
+        android:layout_below="@+id/cardNumberTitle"
+        style="@style/DonationItem" />
 
     <TextView
         android:id="@+id/cardNameTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/card_name"
-        android:layout_below="@+id/cardNumber" />
+        android:layout_below="@+id/cardNumber"
+        style="@style/DonationItem" />
 
     <co.omise.android.ui.CardNameEditText
         android:id="@+id/cardName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/cardNameTitle" />
+        android:layout_below="@+id/cardNameTitle"
+        style="@style/DonationItem" />
 
     <TextView
         android:id="@+id/expiryDateTitle"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:text="@string/expiry_date"
-        android:layout_below="@+id/cardName" />
+        android:layout_below="@+id/cardName"
+        style="@style/DonationItem" />
 
     <co.omise.android.ui.ExpiryDateEditText
         android:id="@+id/expiryDate"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/expiryDateTitle" />
+        android:layout_below="@+id/expiryDateTitle"
+        style="@style/DonationItem" />
 
     <TextView
         android:id="@+id/securityCodeTitle"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:text="@string/security_code"
         android:layout_toEndOf="@+id/expiryDateTitle"
@@ -68,7 +77,7 @@
 
     <co.omise.android.ui.SecurityCodeEditText
         android:id="@+id/securityCode"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_toEndOf="@+id/expiryDate"
         android:layout_below="@+id/securityCodeTitle" />
@@ -78,13 +87,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/submit"
-        android:layout_below="@+id/expiryDate" />
+        android:layout_below="@+id/expiryDate"
+        android:layout_centerHorizontal="true" />
 
     <ProgressBar
         android:id="@+id/loadingView"
         android:visibility="gone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/submit" />
+        android:layout_below="@+id/cardNameTitle"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
