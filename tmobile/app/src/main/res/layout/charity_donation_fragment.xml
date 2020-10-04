@@ -9,12 +9,13 @@
         android:id="@+id/amountTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/payment_amount"
+        android:text="@string/amount"
         android:layout_marginTop="20dp"
         style="@style/DonationItem" />
 
     <EditText
         android:id="@+id/amount"
+        android:hint="@string/amount_hint"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -65,7 +66,8 @@
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/expiryDateTitle"
-        style="@style/DonationItem" />
+        style="@style/DonationItem"
+        android:hint="@string/expiry_date_hint"/>
 
     <TextView
         android:id="@+id/securityCodeTitle"
@@ -80,7 +82,8 @@
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_toEndOf="@+id/expiryDate"
-        android:layout_below="@+id/securityCodeTitle" />
+        android:layout_below="@+id/securityCodeTitle"
+        android:hint="@string/security_code_hint" />
 
     <Button
         android:id="@+id/submit"

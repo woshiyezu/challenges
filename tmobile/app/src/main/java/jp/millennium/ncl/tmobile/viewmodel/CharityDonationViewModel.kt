@@ -47,8 +47,8 @@ class CharityDonationViewModel : ViewModel() {
 
         val request = Token.CreateTokenRequestBuilder(cardParam).build()
         client.send(request, object : RequestListener<Token> {
-            override fun onRequestSucceed(token: Token) {
-                createDonation(cardName, token.id ?: "", amount)
+            override fun onRequestSucceed(model: Token) {
+                createDonation(cardName, model.id ?: "", amount)
             }
 
             override fun onRequestFailed(throwable: Throwable) {
