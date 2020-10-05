@@ -26,7 +26,7 @@ class CharityListViewModel : ViewModel() {
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeWith(object: DisposableSingleObserver<List<Charity>>(){
                     override fun onSuccess(charityList: List<Charity>) {
-                        charitiesRetrived(charityList)
+                        charitiesRetrieved(charityList)
                     }
 
                     override fun onError(e: Throwable) {
@@ -37,7 +37,7 @@ class CharityListViewModel : ViewModel() {
                 }))
     }
 
-    private fun charitiesRetrived(charityList:List<Charity>){
+    private fun charitiesRetrieved(charityList:List<Charity>){
         charities.value = charityList
         loading.value = false
         charitiesLoadError.value  = false

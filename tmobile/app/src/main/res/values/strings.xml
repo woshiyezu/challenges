@@ -4,7 +4,6 @@
     <string name="amount">Payment Amount</string>
     <string name="amount_hint">THB</string>
     <string name="card_number">Card Number</string>
-    <string name="card_number_hint">Card Number</string>
     <string name="card_name">Name on card</string>
     <string name="expiry_date">Expiry date</string>
     <string name="expiry_date_hint">MM/YY</string>
@@ -14,5 +13,5 @@
     <string name="payment_desc">Your payment is complete.</string>
     <string name="go_home">Go Home</string>
 
-    <string name="an_error_occured_while_loading_data">An error occurred while loading data</string>
+    <string name="an_error_occurred_while_loading_data">An error occurred while loading data</string>
 </resources>

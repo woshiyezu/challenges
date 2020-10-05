@@ -10,7 +10,7 @@ import jp.millennium.ncl.tmobile.R
 import jp.millennium.ncl.tmobile.databinding.ItemCharityBinding
 import jp.millennium.ncl.tmobile.model.Charity
 
-class CharityListAdapter(val charityList: ArrayList<Charity>) : RecyclerView.Adapter<CharityListAdapter.CharityViewHolder>() {
+class CharityListAdapter(private val charityList: ArrayList<Charity>) : RecyclerView.Adapter<CharityListAdapter.CharityViewHolder>() {
 
     fun updateCharityList(newCharityList: List<Charity>) {
         charityList.clear()
