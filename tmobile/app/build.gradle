@@ -45,8 +45,8 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.0.0'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.0'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
     //navigations
     implementation "androidx.navigation:navigation-fragment-ktx:$navVersion"
@@ -66,4 +66,5 @@ dependencies {
 
     //omise android
     implementation 'co.omise:omise-android:3.1.+'
+    androidTestImplementation 'androidx.test:rules:1.3.0'
 }
