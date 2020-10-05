@@ -2,6 +2,9 @@ package jp.millennium.ncl.tmobile.view
 
 import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextUtils
+import android.text.TextWatcher
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -15,7 +18,7 @@ import jp.millennium.ncl.tmobile.model.OmiseResult
 import jp.millennium.ncl.tmobile.viewmodel.CharityDonationViewModel
 import kotlinx.android.synthetic.main.charity_donation_fragment.*
 
-class CharityDonationFragment : Fragment() {
+class CharityDonationFragment : Fragment(), TextWatcher {
 
     private lateinit var viewModel: CharityDonationViewModel
 
@@ -41,6 +44,7 @@ class CharityDonationFragment : Fragment() {
             )
         }
         observeViewModel()
+        setEditTexts()
     }
 
     private fun observeViewModel(){
@@ -68,5 +72,34 @@ class CharityDonationFragment : Fragment() {
                 }
             }
         })
+    }
+
+
+    private fun setEditTexts(){
+        amount.addTextChangedListener(this)
+        cardNumber.addTextChangedListener(this)
+        cardName.addTextChangedListener(this)
+        expiryDate.addTextChangedListener(this)
+        securityCode.addTextChangedListener(this)
+    }
+
+    override fun afterTextChanged(s: Editable?) {
+        if (TextUtils.isEmpty(amount.text.toString()) ||
+            TextUtils.isEmpty(cardNumber.text.toString()) ||
+            TextUtils.isEmpty(cardName.text.toString()) ||
+            TextUtils.isEmpty(expiryDate.text.toString()) ||
+            TextUtils.isEmpty(securityCode.text.toString())
+        ) {
+            submit.isEnabled = false
+            return
+        }
+
+        submit.isEnabled = true
+    }
+
+    override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+    }
+
+    override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
     }
 }

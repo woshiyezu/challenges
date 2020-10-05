@@ -95,7 +95,8 @@
         android:layout_height="wrap_content"
         android:text="@string/submit"
         android:layout_below="@+id/expiryDate"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:enabled="false" />
 
     <ProgressBar
         android:id="@+id/loadingView"

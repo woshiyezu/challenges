@@ -46,6 +46,8 @@ class MainActivityTest {
         )
         linearLayout.perform(click())
 
+        Thread.sleep(5000)
+
         val appCompatEditText = onView(
             allOf(
                 withId(R.id.amount),
