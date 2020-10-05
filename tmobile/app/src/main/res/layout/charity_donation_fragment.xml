@@ -21,7 +21,11 @@
         android:ems="10"
         android:inputType="number"
         android:layout_below="@+id/amountTitle"
-        style="@style/DonationItem" />
+        style="@style/DonationItem"
+        android:autofillHints=""
+        tools:targetApi="o">
+        <requestFocus />
+    </EditText>
 
     <TextView
         android:id="@+id/cardNumberTitle"
