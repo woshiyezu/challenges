@@ -13,5 +13,5 @@ interface OmiseApi {
 
     @Headers("Content-Type: application/json")
     @POST("donations")
-    fun createDonations(@Body donation: Donation): Single<ResOmise>
+    fun createDonations(@Body donation: Donation): Single<ResposeOmise>
 }

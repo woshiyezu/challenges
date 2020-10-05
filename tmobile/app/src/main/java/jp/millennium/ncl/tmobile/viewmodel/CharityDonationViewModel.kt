@@ -42,6 +42,7 @@ class CharityDonationViewModel : ViewModel() {
         createToken(cardName, cardParam, amount)
     }
 
+    // create Tokenization
     private fun createToken(cardName: String, cardParam: CardParam, amount: String) {
         loading.value = true
 
@@ -58,13 +59,14 @@ class CharityDonationViewModel : ViewModel() {
         })
     }
 
+    // send data to the /donations
     private fun createDonation(cardName: String, token: String, amount: String) {
         disposable.add(
             omiseService.createDonations(Donation(cardName, token, amount.toInt()))
                 .subscribeOn(Schedulers.newThread())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribeWith(object: DisposableSingleObserver<ResOmise>(){
-                    override fun onSuccess(resOmise: ResOmise) {
+                .subscribeWith(object: DisposableSingleObserver<ResposeOmise>(){
+                    override fun onSuccess(resposeOmise: ResposeOmise) {
                         result.value = OmiseResult.Ok
                         loading.value = false
                     }

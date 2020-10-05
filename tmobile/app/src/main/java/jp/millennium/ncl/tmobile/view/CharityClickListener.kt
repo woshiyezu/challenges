@@ -5,5 +5,4 @@ import android.view.View
 interface CharityClickListener {
 
     fun onCharityClicked(v: View)
-
 }

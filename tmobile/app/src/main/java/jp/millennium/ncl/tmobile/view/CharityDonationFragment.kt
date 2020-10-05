@@ -18,6 +18,9 @@ import jp.millennium.ncl.tmobile.model.OmiseResult
 import jp.millennium.ncl.tmobile.viewmodel.CharityDonationViewModel
 import kotlinx.android.synthetic.main.charity_donation_fragment.*
 
+/**
+ * Charity donation screen
+ */
 class CharityDonationFragment : Fragment(), TextWatcher {
 
     private lateinit var viewModel: CharityDonationViewModel
@@ -34,6 +37,7 @@ class CharityDonationFragment : Fragment(), TextWatcher {
         viewModel = ViewModelProviders.of(this).get(CharityDonationViewModel::class.java)
 
         submit.setOnClickListener {
+            // payment THB
             viewModel.payment(
                 cardName.cardName,
                 cardNumber.cardNumber,
@@ -43,8 +47,8 @@ class CharityDonationFragment : Fragment(), TextWatcher {
                 amount.text.toString()
             )
         }
-        observeViewModel()
         setEditTexts()
+        observeViewModel()
     }
 
     private fun observeViewModel(){
@@ -74,7 +78,6 @@ class CharityDonationFragment : Fragment(), TextWatcher {
         })
     }
 
-
     private fun setEditTexts(){
         amount.addTextChangedListener(this)
         cardNumber.addTextChangedListener(this)
@@ -94,6 +97,7 @@ class CharityDonationFragment : Fragment(), TextWatcher {
             return
         }
 
+        // submit button is enable, if all text fields are not empty
         submit.isEnabled = true
     }
 

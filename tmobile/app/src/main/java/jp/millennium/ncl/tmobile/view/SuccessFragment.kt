@@ -10,6 +10,9 @@ import androidx.navigation.Navigation
 import jp.millennium.ncl.tmobile.R
 import kotlinx.android.synthetic.main.success_fragment.*
 
+/**
+ * Success screen
+ */
 class SuccessFragment : Fragment() {
 
     private var amount: String? = null

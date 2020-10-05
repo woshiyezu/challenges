@@ -13,6 +13,9 @@ import jp.millennium.ncl.tmobile.R
 import jp.millennium.ncl.tmobile.viewmodel.CharityListViewModel
 import kotlinx.android.synthetic.main.charity_list_fragment.*
 
+/**
+ * Charity list screen
+ */
 class CharityListFragment : Fragment() {
 
     private lateinit var viewModel: CharityListViewModel
@@ -28,6 +31,7 @@ class CharityListFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProviders.of(this).get(CharityListViewModel::class.java)
+        // Load list of charities from the /charities
         viewModel.fetchCharitiesFromRemote()
 
         charityList.apply {

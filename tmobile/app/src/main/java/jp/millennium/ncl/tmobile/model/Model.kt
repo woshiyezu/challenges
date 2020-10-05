@@ -21,7 +21,7 @@ data class Donation(
     val amount: Int
 )
 
-data class ResOmise(
+data class ResposeOmise(
 
     @SerializedName("success")
     val success: Boolean,

@@ -19,7 +19,7 @@ class OmiseApiService {
         return api.getCharities()
     }
 
-    fun createDonations(donation: Donation): Single<ResOmise> {
+    fun createDonations(donation: Donation): Single<ResposeOmise> {
         return api.createDonations(donation)
     }
 
