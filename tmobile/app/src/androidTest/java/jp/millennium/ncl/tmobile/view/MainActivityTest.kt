@@ -27,6 +27,14 @@ class MainActivityTest {
     @JvmField
     var mActivityTestRule = ActivityTestRule(MainActivity::class.java)
 
+    /**
+     * UI test
+     * 1. launch app
+     * 2. show Charity list screen
+     * 3. input all on Charity donation screen
+     * 4. show Success screen
+     * 5. go home
+     */
     @Test
     fun mainActivityTest() {
         val linearLayout = onView(
